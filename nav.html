@@ -1,0 +1,97 @@
+<body class="min-h-screen bg-gradient-to-b from-neutral-50 to-neutral-100 overflow-x-hidden">
+  <nav class="relative w-[99%] mx-auto py-0 px-6 border-b border-amber-500/20 rounded-tl-none rounded-tr-[50px] rounded-bl-[50px] rounded-br-lg bg-black">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <div class="h-14 w-14 bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20">
+          <img src="logo2.jpg" alt="">
+        </div>
+        <div class="flex flex-col">
+          <span class="text-amber-400 text-2xl font-bold tracking-tight leading-none">DESIGN BRICC</span>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-10 uppercase font-medium tracking-wide text-[18px]">
+        <a href="index.html" class="relative text-amber-400 group">
+          <span>Home</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="about.html" class="relative text-white group hover:text-amber-400">
+          <span>About Us</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+        </a>
+
+        <!-- Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center text-amber-400 group-hover:text-white relative">
+            <span>OUR PROJECTS</span>
+            <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-white group-hover:w-full transition-all duration-300"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="m6 9 6 6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="absolute left-0 mt-2 w-56 bg-black/95 backdrop-blur-xl text-white rounded-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-amber-500/20">
+            <div class="py-2">
+              <a href="architecture.html" class="block px-4 py-2 text-sm font-semibold hover:bg-neutral-800 hover:text-amber-400">ARCHITECTURE</a>
+              <a href="interior.html" class="block px-4 py-2 text-sm font-semibold hover:bg-neutral-800 hover:text-amber-400">INTERIOR</a>
+              <a href="landscapping.html" class="block px-4 py-2 text-sm font-semibold hover:bg-neutral-800 hover:text-amber-400">LANDSCAPING</a>
+              <a href="vastu.html" class="block px-4 py-2 text-sm font-semibold hover:bg-neutral-800 hover:text-amber-400">VASTU CONSULTANT</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="service.html" class="relative text-white hover:text-amber-400 group">
+          <span>Services</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="contact.html" class="relative text-white hover:text-amber-400 group">
+          <span>Contact</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-amber-400 group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </div>
+
+      <!-- Hamburger Icon -->
+      <button id="hamburgerBtn" class="md:hidden text-white hover:text-amber-400">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden mt-4 px-4 py-6 space-y-2 hidden uppercase font-medium tracking-wide text-[16px] z-50 bg-black text-white rounded-lg shadow-lg">
+      <a href="index.html" class="block py-2 text-amber-400">Home</a>
+      <a href="about.html" class="block py-2 text-white">About Us</a>
+
+      <!-- Collapsible Dropdown -->
+      <details class="group">
+        <summary class="cursor-pointer py-2 text-amber-400 flex items-center justify-between">
+          OUR PROJECT
+          <svg class="w-4 h-4 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </summary>
+        <div class="ml-4 mt-2 space-y-1 text-sm bg-neutral-900 text-white p-4 rounded-md">
+          <a href="architecture.html" class="block text-white">ARCHITECTURE</a>
+          <a href="interior.html" class="block text-white">INTERIOR</a>
+          <a href="landscapping.html" class="block text-white">LANDSCAPING</a>
+          <a href="vastu.html" class="block text-white">VASTU CONSULTANT</a>
+        </div>
+      </details>
+
+      <a href="service.html" class="block py-2 text-white">Services</a>
+      <a href="contact.html" class="block py-2 text-white">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Toggle Script -->
+  <script>
+    const hamburger = document.getElementById('hamburgerBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
